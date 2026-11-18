@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hhx-blog.aikouya.store/</loc>
+    <loc>https://book.aikouya.store/</loc>
     <lastmod>2026-11-18</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://hhx-blog.aikouya.store/about</loc>
+    <loc>https://book.aikouya.store/about</loc>
     <lastmod>2026-11-18</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hhx-blog.aikouya.store/subscribe</loc>
+    <loc>https://book.aikouya.store/subscribe</loc>
     <lastmod>2026-11-18</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://hhx-blog.aikouya.store/article?slug=virtual-threads-spring-boot</loc>
+    <loc>https://book.aikouya.store/article?slug=virtual-threads-spring-boot</loc>
     <lastmod>2026-11-12</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hhx-blog.aikouya.store/article?slug=spring-ai-rag-in-production</loc>
+    <loc>https://book.aikouya.store/article?slug=spring-ai-rag-in-production</loc>
     <lastmod>2026-11-06</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hhx-blog.aikouya.store/article?slug=g1-tuning-three-seconds</loc>
+    <loc>https://book.aikouya.store/article?slug=g1-tuning-three-seconds</loc>
     <lastmod>2026-10-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hhx-blog.aikouya.store/article?slug=explain-three-lines</loc>
+    <loc>https://book.aikouya.store/article?slug=explain-three-lines</loc>
     <lastmod>2026-10-19</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hhx-blog.aikouya.store/article?slug=api-contract-first</loc>
+    <loc>https://book.aikouya.store/article?slug=api-contract-first</loc>
     <lastmod>2026-10-08</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hhx-blog.aikouya.store/article?slug=java21-pattern-matching</loc>
+    <loc>https://book.aikouya.store/article?slug=java21-pattern-matching</loc>
     <lastmod>2026-09-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hhx-blog.aikouya.store/article?slug=cache-consistency</loc>
+    <loc>https://book.aikouya.store/article?slug=cache-consistency</loc>
     <lastmod>2026-09-14</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hhx-blog.aikouya.store/article?slug=structured-data-ai-qa</loc>
+    <loc>https://book.aikouya.store/article?slug=structured-data-ai-qa</loc>
     <lastmod>2026-08-30</lastmod>
     <priority>0.8</priority>
   </url>
