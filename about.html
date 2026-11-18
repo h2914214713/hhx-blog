@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>关于 — HHX</title>
+<meta name="description" content="关于这个博客：为什么写、写什么、以及技术栈。" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230071e3'/%3E%3Ctext x='16' y='22' font-family='Helvetica,Arial' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-dot"></span>HHX</a>
+    <div class="nav-links">
+      <a href="index.html#articles">文章</a>
+      <a href="index.html#topics">专题</a>
+      <a class="is-active" href="about.html">关于</a>
+      <a class="nav-cta" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom: 64px;">
+  <p class="eyebrow reveal">关于</p>
+  <h1 class="reveal">写给未来的<br /><span class="grad">自己看。</span></h1>
+  <p class="hero-sub reveal">这个博客没有算法推荐，没有流量焦虑。它只是我把踩过的坑写下来的地方。</p>
+</header>
+
+<section class="section section--tight">
+  <div class="about-grid">
+    <div class="reveal">
+      <p><strong>为什么写。</strong>生产环境里学到的东西，有一部分永远进不了官方文档——比如虚拟线程上线后连接池要调小、比如一次 3 秒的 GC 停顿背后是 Humongous 对象。这些经验如果不写下来，半年后连我自己都会忘。</p>
+      <p><strong>写什么。</strong>主线和博客名字一样朴素：Java 后端、AI 工程，以及这两者与前端交界的地方。不写「一分钟入门」，也不写「XX 已死」。每篇都尽量带一次真实的故障、一组真实的数字。</p>
+      <p><strong>怎么写。</strong>先用 Markdown 写清楚问题，再回到代码里验证。所有结论都在本地或测试环境复现过，网上抄来的说法会用「据说」标注。</p>
+      <p><strong>关于技术栈。</strong>这个站是手写的 HTML + CSS + 一点原生 JavaScript，没有框架、没有构建步骤、没有依赖。托管在 Cloudflare Pages，源码在 GitHub。加载整个首页的传输量不到 80KB。</p>
+      <p>如果你在文章里发现了错误，欢迎直接发邮件告诉我。被指出错误是这件小事里最开心的部分。</p>
+    </div>
+
+    <aside class="stack-card reveal">
+      <h3>常用技术栈</h3>
+      <div class="stack-item"><span>语言</span><span>Java 21 · TypeScript</span></div>
+      <div class="stack-item"><span>框架</span><span>Spring Boot 3 · Vue 3</span></div>
+      <div class="stack-item"><span>数据</span><span>MySQL · Redis · PGVector</span></div>
+      <div class="stack-item"><span>AI</span><span>Spring AI · OpenAI API</span></div>
+      <div class="stack-item"><span>部署</span><span>Docker · Cloudflare Pages</span></div>
+      <div class="stack-item"><span>工具</span><span>IDEA · Git · Wireshark</span></div>
+      <div class="stack-item"><span>联系</span><span>huanghaoxuan822@163.com</span></div>
+    </aside>
+  </div>
+</section>
+
+<section class="quote">
+  <blockquote class="reveal">把复杂留给自己，<br />把简单留给读代码的人。</blockquote>
+  <cite class="reveal">— 本站的写作准则</cite>
+</section>
+
+<section class="section">
+  <div class="wrap subscribe">
+    <h2 class="reveal">想聊聊？</h2>
+    <p class="reveal">技术问题、文章纠错、或者只是想认识一下，都欢迎发邮件。</p>
+    <div class="cta-row reveal">
+      <a class="btn" href="mailto:huanghaoxuan822@163.com">发一封邮件</a>
+      <a class="link-arrow" href="index.html#articles">先看看文章 <span>›</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>博客</h4>
+        <ul>
+          <li><a href="index.html#articles">全部文章</a></li>
+          <li><a href="index.html#topics">专题</a></li>
+          <li><a href="about.html">关于</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>专题</h4>
+        <ul>
+          <li><a href="index.html#articles">Java 后端</a></li>
+          <li><a href="index.html#articles">AI 工程</a></li>
+          <li><a href="index.html#articles">前后端协作</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>联系</h4>
+        <ul>
+          <li><a href="mailto:huanghaoxuan822@163.com">邮件</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>本站</h4>
+        <ul>
+          <li><a href="https://pages.cloudflare.com" target="_blank" rel="noopener">Cloudflare Pages</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener">源码</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright © <span data-year>2026</span> HHX. 保留所有权利。</span>
+      <span>用 HTML、CSS 和一点好奇心手写而成。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

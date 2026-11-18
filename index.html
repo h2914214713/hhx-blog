@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HHX — Java 后端与 AI 工程笔记</title>
+<meta name="description" content="Java 后端与 AI 工程的实践笔记：Spring、JVM、缓存架构、RAG 与 AI 应用落地。" />
+<meta name="theme-color" content="#ffffff" />
+<meta property="og:title" content="HHX — Java 后端与 AI 工程笔记" />
+<meta property="og:description" content="把复杂留给自己。" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230071e3'/%3E%3Ctext x='16' y='22' font-family='Helvetica,Arial' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-dot"></span>HHX</a>
+    <div class="nav-links">
+      <a href="#articles">文章</a>
+      <a href="#topics">专题</a>
+      <a href="about.html">关于</a>
+      <a class="nav-cta" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <p class="eyebrow reveal">JAVA · AI · 工程笔记</p>
+  <h1 class="reveal">把复杂<br /><span class="grad">留给自己。</span></h1>
+  <p class="hero-sub reveal">Java 后端与 AI 工程的实践记录。Spring、JVM、缓存一致性、RAG 落地——那些在生产环境里才学得到的事。</p>
+  <div class="cta-row reveal">
+    <a class="btn" href="#articles">开始阅读</a>
+    <a class="link-arrow" href="about.html">这个博客是怎么来的 <span>›</span></a>
+  </div>
+</header>
+
+<section class="section section--tight">
+  <article class="feature reveal" data-featured>
+    <div class="feature-body">
+      <span class="tag" data-featured-meta>精选</span>
+      <h3 data-featured-title>用 Spring AI 做 RAG：demo 半天，上线三个月</h3>
+      <p data-featured-excerpt>向量检索能跑通只是起点。真正决定效果的是切分策略与混合检索。</p>
+      <a class="btn" data-featured-link href="article.html">阅读全文</a>
+    </div>
+    <div class="feature-art" aria-hidden="true">
+      <div class="fa-panel">
+        <div class="fa-head"><span class="fa-dot"></span>retrieval · top 3</div>
+        <div class="fa-row"><span class="fa-score">0.92</span><span class="fa-bar"><i style="--w:92%"></i></span></div>
+        <div class="fa-row"><span class="fa-score">0.87</span><span class="fa-bar"><i style="--w:74%"></i></span></div>
+        <div class="fa-row"><span class="fa-score">0.61</span><span class="fa-bar"><i style="--w:41%"></i></span></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="section" id="topics">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <h2>按专题浏览</h2>
+        <p>三个方向，都是我平时真正在写的东西。</p>
+      </div>
+    </div>
+    <div class="tiles">
+      <a class="tile tile--java reveal" href="#articles">
+        <span class="tile-num">01</span>
+        <h3>Java 后端</h3>
+        <p>Spring 生态、JVM 调优、并发模型、分布式事务与缓存。</p>
+        <span class="count" data-count="java">文章</span>
+      </a>
+      <a class="tile tile--ai reveal" href="#articles">
+        <span class="tile-num">02</span>
+        <h3>AI 工程</h3>
+        <p>RAG 架构、Text-to-SQL、模型选型与成本控制。</p>
+        <span class="count" data-count="ai">文章</span>
+      </a>
+      <a class="tile tile--fe reveal" href="#articles">
+        <span class="tile-num">03</span>
+        <h3>前后端协作</h3>
+        <p>接口契约、类型安全、联调流程与工程规范。</p>
+        <span class="count" data-count="fe">文章</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="articles">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <h2>最新文章</h2>
+        <p>按时间倒序，每篇都来自一次真实的踩坑。</p>
+      </div>
+      <a class="link-arrow" href="about.html">RSS 订阅 <span>›</span></a>
+    </div>
+    <div class="posts" data-post-list></div>
+  </div>
+</section>
+
+<section class="quote">
+  <blockquote class="reveal">代码是写给人看的，<br />顺便能在机器上跑。</blockquote>
+  <cite class="reveal">— 每次 review 时我都会想起这句话</cite>
+</section>
+
+<section class="section">
+  <div class="wrap subscribe">
+    <h2 class="reveal">每月一封，只写有用的。</h2>
+    <p class="reveal">新文章、读到的源码片段、以及一次真实的故障复盘。不发广告。</p>
+    <form class="mail-form reveal">
+      <input type="email" placeholder="你的邮箱" required aria-label="邮箱" />
+      <button type="submit">订阅</button>
+    </form>
+    <p class="form-note reveal">随时可以退订，我不会保存多余的信息。</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>博客</h4>
+        <ul>
+          <li><a href="#articles">全部文章</a></li>
+          <li><a href="#topics">专题</a></li>
+          <li><a href="about.html">关于</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>专题</h4>
+        <ul>
+          <li><a href="#articles">Java 后端</a></li>
+          <li><a href="#articles">AI 工程</a></li>
+          <li><a href="#articles">前后端协作</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>联系</h4>
+        <ul>
+          <li><a href="mailto:huanghaoxuan822@163.com">邮件</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>本站</h4>
+        <ul>
+          <li><a href="https://pages.cloudflare.com" target="_blank" rel="noopener">Cloudflare Pages</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener">源码</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright © <span data-year>2026</span> HHX. 保留所有权利。</span>
+      <span>用 HTML、CSS 和一点好奇心手写而成。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
