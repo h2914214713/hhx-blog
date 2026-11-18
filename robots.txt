@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # 站点地图
-Sitemap: https://aikouya.store/sitemap.xml
+Sitemap: https://hhx-blog.aikouya.store/sitemap.xml
