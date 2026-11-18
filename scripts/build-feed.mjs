@@ -9,7 +9,7 @@ const root = path.resolve(import.meta.dirname, "..");
 const dataPath = path.join(root, "assets/js/data.js");
 const outPath = path.join(root, "feed.xml");
 
-const SITE = process.env.SITE_URL || "https://book.aikouya.store";
+const SITE = process.env.SITE_URL || "https://blog.aikouya.store";
 const TITLE = "HHX — Java 与 AI 笔记";
 const SUBTITLE = "Java 后端与 AI 工程的实践笔记：Spring、JVM、缓存架构、RAG 与 AI 应用落地。";
 
