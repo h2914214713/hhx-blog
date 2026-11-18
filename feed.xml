@@ -4,15 +4,15 @@
      xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>HHX — Java 与 AI 笔记</title>
-    <link>https://hhx-blog.pages.dev/</link>
-    <atom:link href="https://hhx-blog.pages.dev/feed.xml" rel="self" type="application/rss+xml" />
+    <link>https://aikouya.store/</link>
+    <atom:link href="https://aikouya.store/feed.xml" rel="self" type="application/rss+xml" />
     <description>Java 后端与 AI 工程的实践笔记：Spring、JVM、缓存架构、RAG 与 AI 应用落地。</description>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 12 Nov 2026 01:00:00 GMT</lastBuildDate>
     <item>
       <title>虚拟线程上线一周，我把数据库连接池从 200 调到了 40</title>
-      <link>https://hhx-blog.pages.dev/article.html?slug=virtual-threads-spring-boot</link>
-      <guid isPermaLink="true">https://hhx-blog.pages.dev/article.html?slug=virtual-threads-spring-boot</guid>
+      <link>https://aikouya.store/article?slug=virtual-threads-spring-boot</link>
+      <guid isPermaLink="true">https://aikouya.store/article?slug=virtual-threads-spring-boot</guid>
       <pubDate>Thu, 12 Nov 2026 01:00:00 GMT</pubDate>
       <category>Java 后端</category>
       <description>虚拟线程不是「线程池的替代品」，它改变的是你对阻塞的定价方式。真正需要重新计算的，是那些按线程数配出来的池子。</description>
@@ -64,8 +64,8 @@ public void refresh() {
     </item>
     <item>
       <title>用 Spring AI 做 RAG：demo 半天，上线三个月</title>
-      <link>https://hhx-blog.pages.dev/article.html?slug=spring-ai-rag-in-production</link>
-      <guid isPermaLink="true">https://hhx-blog.pages.dev/article.html?slug=spring-ai-rag-in-production</guid>
+      <link>https://aikouya.store/article?slug=spring-ai-rag-in-production</link>
+      <guid isPermaLink="true">https://aikouya.store/article?slug=spring-ai-rag-in-production</guid>
       <pubDate>Fri, 06 Nov 2026 01:00:00 GMT</pubDate>
       <category>AI 工程</category>
       <description>向量检索能跑通只是起点。真正决定效果的是切分策略、混合检索的权重，以及那个没人愿意承认的问题——知识库本身就过期了。</description>
@@ -127,8 +127,8 @@ LIMIT 8;
     </item>
     <item>
       <title>线上一次 3 秒的 GC 停顿，让我重读了 G1 的参数表</title>
-      <link>https://hhx-blog.pages.dev/article.html?slug=g1-tuning-three-seconds</link>
-      <guid isPermaLink="true">https://hhx-blog.pages.dev/article.html?slug=g1-tuning-three-seconds</guid>
+      <link>https://aikouya.store/article?slug=g1-tuning-three-seconds</link>
+      <guid isPermaLink="true">https://aikouya.store/article?slug=g1-tuning-three-seconds</guid>
       <pubDate>Wed, 28 Oct 2026 01:00:00 GMT</pubDate>
       <category>JVM</category>
       <description>Humongous 对象、Region 碎片、以及那个被误设成 8 的 ParallelGCThreads——一次完整的排查记录。</description>
@@ -179,8 +179,8 @@ LIMIT 8;
     </item>
     <item>
       <title>EXPLAIN 里那三行最容易看错的输出</title>
-      <link>https://hhx-blog.pages.dev/article.html?slug=explain-three-lines</link>
-      <guid isPermaLink="true">https://hhx-blog.pages.dev/article.html?slug=explain-three-lines</guid>
+      <link>https://aikouya.store/article?slug=explain-three-lines</link>
+      <guid isPermaLink="true">https://aikouya.store/article?slug=explain-three-lines</guid>
       <pubDate>Mon, 19 Oct 2026 01:00:00 GMT</pubDate>
       <category>数据库</category>
       <description>rows 不是返回行数，filtered 不是过滤效率，key 有值也不代表走对了索引。</description>
@@ -227,8 +227,8 @@ WHERE phone = '13800138000'
     </item>
     <item>
       <title>把前后端的争吵前置到设计阶段</title>
-      <link>https://hhx-blog.pages.dev/article.html?slug=api-contract-first</link>
-      <guid isPermaLink="true">https://hhx-blog.pages.dev/article.html?slug=api-contract-first</guid>
+      <link>https://aikouya.store/article?slug=api-contract-first</link>
+      <guid isPermaLink="true">https://aikouya.store/article?slug=api-contract-first</guid>
       <pubDate>Thu, 08 Oct 2026 01:00:00 GMT</pubDate>
       <category>前后端协作</category>
       <description>接口契约不是文档，是可执行的约束。用 OpenAPI + 代码生成，让字段改名这种事在编译期就报错。</description>
@@ -279,8 +279,8 @@ WHERE phone = '13800138000'
     </item>
     <item>
       <title>Java 21 的模式匹配，把 if-else 拆成数据形状</title>
-      <link>https://hhx-blog.pages.dev/article.html?slug=java21-pattern-matching</link>
-      <guid isPermaLink="true">https://hhx-blog.pages.dev/article.html?slug=java21-pattern-matching</guid>
+      <link>https://aikouya.store/article?slug=java21-pattern-matching</link>
+      <guid isPermaLink="true">https://aikouya.store/article?slug=java21-pattern-matching</guid>
       <pubDate>Sat, 26 Sep 2026 01:00:00 GMT</pubDate>
       <category>Java 语言</category>
       <description>sealed interface + record + switch 模式匹配，三者组合起来，才能在编译期穷尽所有分支。</description>
@@ -352,8 +352,8 @@ String describe(Event e) {
     </item>
     <item>
       <title>缓存一致性：延迟双删到底要删几次</title>
-      <link>https://hhx-blog.pages.dev/article.html?slug=cache-consistency</link>
-      <guid isPermaLink="true">https://hhx-blog.pages.dev/article.html?slug=cache-consistency</guid>
+      <link>https://aikouya.store/article?slug=cache-consistency</link>
+      <guid isPermaLink="true">https://aikouya.store/article?slug=cache-consistency</guid>
       <pubDate>Mon, 14 Sep 2026 01:00:00 GMT</pubDate>
       <category>架构</category>
       <description>先删缓存再更新库、先更新库再删缓存、延迟双删——三种方案的失败窗口究竟在哪，以及什么时候该放弃它们。</description>
@@ -408,8 +408,8 @@ String describe(Event e) {
     </item>
     <item>
       <title>让 AI 回答数据库里的问题，准确率从 40% 到 92%</title>
-      <link>https://hhx-blog.pages.dev/article.html?slug=structured-data-ai-qa</link>
-      <guid isPermaLink="true">https://hhx-blog.pages.dev/article.html?slug=structured-data-ai-qa</guid>
+      <link>https://aikouya.store/article?slug=structured-data-ai-qa</link>
+      <guid isPermaLink="true">https://aikouya.store/article?slug=structured-data-ai-qa</guid>
       <pubDate>Sun, 30 Aug 2026 01:00:00 GMT</pubDate>
       <category>AI 工程</category>
       <description>Text-to-SQL 的准确率瓶颈不在模型，在 schema 的可理解性、指标口径的统一，以及那个必须存在的执行沙箱。</description>

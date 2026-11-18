@@ -1,0 +1,7 @@
+# Cloudflare Pages 响应头配置
+# 文档：https://developers.cloudflare.com/pages/configuration/headers/
+
+/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+  Cache-Control: public, max-age=1800
+  Access-Control-Allow-Origin: *

@@ -9,7 +9,7 @@ const root = path.resolve(import.meta.dirname, "..");
 const dataPath = path.join(root, "assets/js/data.js");
 const outPath = path.join(root, "feed.xml");
 
-const SITE = "https://hhx-blog.pages.dev";
+const SITE = process.env.SITE_URL || "https://aikouya.store";
 const TITLE = "HHX — Java 与 AI 笔记";
 const SUBTITLE = "Java 后端与 AI 工程的实践笔记：Spring、JVM、缓存架构、RAG 与 AI 应用落地。";
 
@@ -34,7 +34,7 @@ const rfc822 = (date) => new Date(date + "T09:00:00+08:00").toUTCString();
 
 const items = posts
   .map((p) => {
-    const url = `${SITE}/article.html?slug=${encodeURIComponent(p.slug)}`;
+    const url = `${SITE}/article?slug=${encodeURIComponent(p.slug)}`;
     return `    <item>
       <title>${esc(p.title)}</title>
       <link>${esc(url)}</link>

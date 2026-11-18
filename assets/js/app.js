@@ -555,6 +555,18 @@
     if (!p) return;
 
     document.title = p.title + " — HHX";
+
+    // 每篇文章的规范地址与分享信息跟着 slug 走
+    var artUrl = location.origin + "/article?slug=" + encodeURIComponent(p.slug);
+    var canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.href = artUrl;
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.content = artUrl;
+    var ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.content = p.title;
+    var ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc && p.excerpt) ogDesc.content = p.excerpt;
+
     root.querySelector("[data-art-cat]").textContent = p.category;
     root.querySelector("[data-art-title]").textContent = p.title;
     root.querySelector("[data-art-date]").textContent = fmtDate(p.date);
@@ -747,6 +759,68 @@
     });
   }
 
+  /* ================= 订阅页 ================= */
+
+  function initSubscribe() {
+    var urlEl = document.querySelector("[data-feed-url]");
+    if (!urlEl) return;
+
+    // 订阅地址跟着当前域名走，换域名不用改页面
+    var feedUrl = location.origin + "/feed.xml";
+    urlEl.textContent = feedUrl;
+
+    var feedly = document.querySelector("[data-feedly]");
+    if (feedly) {
+      feedly.href =
+        "https://feedly.com/i/subscription/feed%2F" +
+        encodeURIComponent(feedUrl);
+    }
+
+    var inoreader = document.querySelector("[data-inoreader]");
+    if (inoreader) {
+      inoreader.href =
+        "https://www.inoreader.com/?add_feed=" + encodeURIComponent(feedUrl);
+    }
+
+    var snippet = document.querySelector("[data-feed-curl] code");
+    if (snippet) snippet.textContent = "curl -s " + feedUrl + " | head -40";
+
+    Array.prototype.forEach.call(
+      document.querySelectorAll("[data-copy]"),
+      function (btn) {
+        btn.setAttribute("data-copy", feedUrl);
+        btn.addEventListener("click", function () {
+          var done = function () {
+            btn.textContent = "已复制";
+            btn.classList.add("is-done");
+            setTimeout(function () {
+              btn.textContent = "复制";
+              btn.classList.remove("is-done");
+            }, 1600);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(feedUrl).then(done).catch(fallback);
+          } else {
+            fallback();
+          }
+          function fallback() {
+            var ta = document.createElement("textarea");
+            ta.value = feedUrl;
+            ta.style.position = "fixed";
+            ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+              document.execCommand("copy");
+              done();
+            } catch (e) {}
+            document.body.removeChild(ta);
+          }
+        });
+      }
+    );
+  }
+
   function initYear() {
     document.querySelectorAll("[data-year]").forEach(function (el) {
       el.textContent = new Date().getFullYear();
@@ -774,6 +848,7 @@
     initReveal();
     initProgress();
     initForm();
+    initSubscribe();
     initYear();
     initToTop();
   }
