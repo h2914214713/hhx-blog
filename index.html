@@ -10,6 +10,7 @@
 <meta property="og:description" content="把复杂留给自己。" />
 <meta property="og:type" content="website" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230071e3'/%3E%3Ctext x='16' y='22' font-family='Helvetica,Arial' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E" />
+<link rel="alternate" type="application/rss+xml" title="HHX — Java 与 AI 笔记" href="feed.xml" />
 <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
@@ -33,6 +34,15 @@
   <div class="cta-row reveal">
     <a class="btn" href="#articles">开始阅读</a>
     <a class="link-arrow" href="about.html">这个博客是怎么来的 <span>›</span></a>
+  </div>
+  <div class="statusbar reveal" data-statusbar>
+    <span>现在 <b data-clock>--:--</b> 北京时间</span>
+    <i></i>
+    <span>已发布 <b data-stat-posts>0</b> 篇</span>
+    <i></i>
+    <span>共 <b data-stat-words>0</b> 字</span>
+    <i></i>
+    <span>最近更新 <b data-stat-last>—</b></span>
   </div>
 </header>
 
@@ -93,9 +103,39 @@
         <h2>最新文章</h2>
         <p>按时间倒序，每篇都来自一次真实的踩坑。</p>
       </div>
-      <a class="link-arrow" href="about.html">RSS 订阅 <span>›</span></a>
+      <a class="link-arrow" href="feed.xml">RSS 订阅 <span>›</span></a>
     </div>
     <div class="posts" data-post-list></div>
+  </div>
+</section>
+
+<section class="section" id="calendar">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <h2>写作日历</h2>
+        <p>有圆点的日子发过文章，点一下直接跳到当天那篇。</p>
+      </div>
+      <div class="cal-nav">
+        <button type="button" data-cal-prev aria-label="上个月">‹</button>
+        <span class="cal-label" data-cal-label></span>
+        <button type="button" data-cal-next aria-label="下个月">›</button>
+      </div>
+    </div>
+    <div class="cal-wrap reveal">
+      <div>
+        <div class="cal-week">
+          <span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span>
+        </div>
+        <div class="cal-grid" data-cal-grid></div>
+      </div>
+      <aside class="cal-side">
+        <div class="cal-stat"><b data-cal-total>0</b><span>累计文章</span></div>
+        <div class="cal-stat"><b data-cal-month>0</b><span>本月发布</span></div>
+        <div class="cal-stat"><b data-cal-last>—</b><span>最近更新</span></div>
+        <p class="cal-hint">这里只统计已发布的文章，草稿不显示。</p>
+      </aside>
+    </div>
   </div>
 </section>
 
@@ -109,7 +149,7 @@
     <h2 class="reveal">每月一封，只写有用的。</h2>
     <p class="reveal">新文章、读到的源码片段、以及一次真实的故障复盘。不发广告。</p>
     <form class="mail-form reveal">
-      <input type="email" placeholder="你的邮箱" required aria-label="邮箱" />
+      <input type="email" id="sub-email" name="email" placeholder="你的邮箱" required aria-label="邮箱" />
       <button type="submit">订阅</button>
     </form>
     <p class="form-note reveal">随时可以退订，我不会保存多余的信息。</p>

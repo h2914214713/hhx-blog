@@ -9,7 +9,6 @@ window.POSTS = [
       "虚拟线程不是「线程池的替代品」，它改变的是你对阻塞的定价方式。真正需要重新计算的，是那些按线程数配出来的池子。",
     category: "Java 后端",
     date: "2026-11-12",
-    readTime: "9 分钟",
     tags: ["JDK 21", "Spring Boot", "并发"],
     body: `
 <p>把 <code>spring.threads.virtual.enabled=true</code> 打开只需要一行配置，但接下来一周，我们组的监控群里每天都在讨论同一个问题：为什么连接池被打满了。</p>
@@ -64,7 +63,6 @@ public void refresh() {
       "向量检索能跑通只是起点。真正决定效果的是切分策略、混合检索的权重，以及那个没人愿意承认的问题——知识库本身就过期了。",
     category: "AI 工程",
     date: "2026-11-06",
-    readTime: "12 分钟",
     tags: ["Spring AI", "RAG", "向量数据库"],
     body: `
 <p>去年团队要在内部的运维平台里加一个「问文档」的入口。我用 Spring AI 半天跑通了 demo，然后花了三个月把它做到能上线。这篇文章记录中间踩过的坑。</p>
@@ -129,7 +127,6 @@ LIMIT 8;
       "Humongous 对象、Region 碎片、以及那个被误设成 8 的 ParallelGCThreads——一次完整的排查记录。",
     category: "JVM",
     date: "2026-10-28",
-    readTime: "10 分钟",
     tags: ["G1", "GC 调优", "排查"],
     body: `
 <p>周三下午，订单服务出现一次 3.2 秒的 Full GC。监控上 P99 曲线像被人从中间拽了一把。JVM 参数是别人三年前留下的，堆 16G，G1，<code>MaxGCPauseMillis=200</code>。</p>
@@ -183,7 +180,6 @@ LIMIT 8;
       "rows 不是返回行数，filtered 不是过滤效率，key 有值也不代表走对了索引。",
     category: "数据库",
     date: "2026-10-19",
-    readTime: "8 分钟",
     tags: ["MySQL", "索引", "性能"],
     body: `
 <p>我见过太多「加了索引还是慢」的案例，最后都指向同一件事：<code>EXPLAIN</code> 的输出被读错了。这三个字段最容易被误解。</p>
@@ -233,7 +229,6 @@ WHERE phone = '13800138000'
       "接口契约不是文档，是可执行的约束。用 OpenAPI + 代码生成，让字段改名这种事在编译期就报错。",
     category: "前后端协作",
     date: "2026-10-08",
-    readTime: "7 分钟",
     tags: ["OpenAPI", "Spring Boot", "TypeScript"],
     body: `
 <p>「这个字段为什么是 string？我以为是 number。」「你上周改的字段名，前端还在用旧的。」这类对话在每个 Java + 前端的团队里循环上演。根因不是沟通不畅，是契约没有唯一来源。</p>
@@ -287,7 +282,6 @@ WHERE phone = '13800138000'
       "sealed interface + record + switch 模式匹配，三者组合起来，才能在编译期穷尽所有分支。",
     category: "Java 语言",
     date: "2026-09-26",
-    readTime: "6 分钟",
     tags: ["JDK 21", "record", "sealed"],
     body: `
 <p>模式匹配在 JDK 21 转正之后，我陆续把几个核心领域模型改成了 sealed + record 的组合。最大的变化不是代码变短，而是编译器开始替我检查「你是不是漏了一种情况」。</p>
@@ -362,7 +356,6 @@ String describe(Event e) {
       "先删缓存再更新库、先更新库再删缓存、延迟双删——三种方案的失败窗口究竟在哪，以及什么时候该放弃它们。",
     category: "架构",
     date: "2026-09-14",
-    readTime: "9 分钟",
     tags: ["Redis", "缓存", "一致性"],
     body: `
 <p>「延迟双删」这四个字在面试里被问了十年，但真正上线时踩坑的地方，从来不在删几次，而在于删完之后那个并发读还没结束。</p>
@@ -420,7 +413,6 @@ String describe(Event e) {
       "Text-to-SQL 的准确率瓶颈不在模型，在 schema 的可理解性、指标口径的统一，以及那个必须存在的执行沙箱。",
     category: "AI 工程",
     date: "2026-08-30",
-    readTime: "11 分钟",
     tags: ["Text-to-SQL", "Spring AI", "数据"],
     body: `
 <p>业务方希望「用一句话查数」。我们一开始直接把建表语句塞给模型让它生成 SQL，准确率 40%——比掷骰子好一点，但没人敢用。</p>
