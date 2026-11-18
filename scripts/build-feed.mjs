@@ -65,3 +65,26 @@ ${items}
 
 fs.writeFileSync(outPath, xml, "utf8");
 console.log(`feed.xml 已生成：${posts.length} 篇，${(Buffer.byteLength(xml) / 1024).toFixed(1)} KB`);
+
+/* ---------- 顺带生成 sitemap.xml ---------- */
+
+const today = new Date().toISOString().slice(0, 10);
+
+const url = (loc, lastmod, priority) =>
+  `  <url>
+    <loc>${esc(loc)}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <priority>${priority}</priority>
+  </url>`;
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${url(SITE + "/", today, "1.0")}
+${url(SITE + "/about", today, "0.6")}
+${url(SITE + "/subscribe", today, "0.4")}
+${posts.map((p) => url(`${SITE}/article?slug=${p.slug}`, p.date, "0.8")).join("\n")}
+</urlset>
+`;
+
+fs.writeFileSync(path.join(root, "sitemap.xml"), sitemap, "utf8");
+console.log(`sitemap.xml 已生成：${posts.length + 3} 条`);

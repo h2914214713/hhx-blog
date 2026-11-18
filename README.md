@@ -2,6 +2,8 @@
 
 一个手写的静态博客，视觉语言参考 apple.com：大留白、系统字体、毛玻璃导航、克制的滚动动效。
 
+**线上地址：https://aikouya.store**（Cloudflare Pages 自定义域名，`hhx-blog.pages.dev` 仍可访问）
+
 - 零依赖、零构建：四个 HTML 页面 + 一份 CSS + 一份原生 JS
 - 数据驱动：文章写在 `assets/js/data.js`，新增文章不用碰 HTML
 - 深浅色主题、站内搜索、写作日历、文章目录、代码复制、RSS —— 全部手写实现
@@ -18,7 +20,7 @@
 | 代码复制 | 代码块右上角 | 悬停出现，复制后显示「已复制」 |
 | 阅读进度 | 文章页顶部细线 | 随滚动推进 |
 | 自动字数/时长 | 文章页 meta、搜索列表 | 汉字按 400 字/分钟、西文按 220 词/分钟估算 |
-| RSS | 首页「RSS 订阅」/ `feed.xml` | 由脚本从 data.js 生成 |
+| RSS | 首页「RSS 订阅」→ `/subscribe` | 先到订阅引导页（可直接复制地址、跳转 Feedly/Inoreader），`feed.xml` 由脚本从 data.js 生成 |
 
 ## 目录结构
 
@@ -27,10 +29,14 @@
 ├── index.html            # 首页：首屏、精选、专题、文章列表、写作日历
 ├── article.html          # 文章页：?slug=xxx 渲染对应文章，含右栏目录
 ├── about.html            # 关于
+├── subscribe.html        # 订阅引导页：为什么 RSS 不是网页、怎么加进阅读器
 ├── 404.html              # 自定义 404（Cloudflare Pages 自动使用）
 ├── feed.xml              # RSS，由 scripts/build-feed.mjs 生成
+├── sitemap.xml           # 站点地图，由同一脚本生成
+├── robots.txt            # 指向 sitemap
+├── _headers              # 给 feed.xml 声明 application/rss+xml 与缓存策略
 ├── scripts
-│   └── build-feed.mjs    # 零依赖的 RSS 生成脚本
+│   └── build-feed.mjs    # 零依赖的 RSS + sitemap 生成脚本
 └── assets
     ├── css/site.css      # 全部样式，颜色走 CSS 变量
     └── js
@@ -74,7 +80,13 @@ python -m http.server 4321
 node scripts/build-feed.mjs
 ```
 
-追加文章后跑一次，`feed.xml` 会同步更新。
+追加文章后跑一次，`feed.xml` 与 `sitemap.xml` 会同步更新。
+
+站点根地址默认 `https://aikouya.store`，需要临时换域名时用环境变量覆盖：
+
+```bash
+SITE_URL=https://hhx-blog.pages.dev node scripts/build-feed.mjs
+```
 
 ## 部署
 
@@ -83,6 +95,9 @@ node scripts/build-feed.mjs
 ```bash
 CI=true npx wrangler pages deploy . --project-name hhx-blog --branch main --commit-dirty=true
 ```
+
+自定义域名：`aikouya.store` 与 `www.aikouya.store` 均已在 Pages 项目中绑定（Cloudflare 自动签发证书）。
+两个域名的 DNS 都是指向 `hhx-blog.pages.dev` 的 CNAME，apex 走 Cloudflare 的 CNAME 展平。
 
 ## 写作约定
 
