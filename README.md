@@ -2,7 +2,7 @@
 
 一个手写的静态博客，视觉语言参考 apple.com：大留白、系统字体、毛玻璃导航、克制的滚动动效。
 
-**线上地址：https://aikouya.store**（Cloudflare Pages 自定义域名，`hhx-blog.pages.dev` 仍可访问）
+**线上地址：https://hhx-blog.aikouya.store**（Cloudflare Pages 自定义域名，`hhx-blog.pages.dev` 作为备用地址仍可访问）
 
 - 零依赖、零构建：四个 HTML 页面 + 一份 CSS + 一份原生 JS
 - 数据驱动：文章写在 `assets/js/data.js`，新增文章不用碰 HTML
@@ -82,7 +82,7 @@ node scripts/build-feed.mjs
 
 追加文章后跑一次，`feed.xml` 与 `sitemap.xml` 会同步更新。
 
-站点根地址默认 `https://aikouya.store`，需要临时换域名时用环境变量覆盖：
+站点根地址默认 `https://hhx-blog.aikouya.store`，需要临时换域名时用环境变量覆盖：
 
 ```bash
 SITE_URL=https://hhx-blog.pages.dev node scripts/build-feed.mjs
@@ -96,8 +96,11 @@ SITE_URL=https://hhx-blog.pages.dev node scripts/build-feed.mjs
 CI=true npx wrangler pages deploy . --project-name hhx-blog --branch main --commit-dirty=true
 ```
 
-自定义域名：`aikouya.store` 与 `www.aikouya.store` 均已在 Pages 项目中绑定（Cloudflare 自动签发证书）。
-两个域名的 DNS 都是指向 `hhx-blog.pages.dev` 的 CNAME，apex 走 Cloudflare 的 CNAME 展平。
+自定义域名：`hhx-blog.aikouya.store` 已绑定到 Pages 项目，DNS 为指向 `hhx-blog.pages.dev` 的 CNAME（已代理）。
+
+> 域名 `aikouya.store` 托管在 Cloudflare：apex 上只有 Cloudflare Email Routing 的 MX 记录，
+> 另有 `cdn` / `demo` / `game` / `mail` 等 Worker 与隧道子域。博客只占 `hhx-blog` 这一个子域，
+> 根域 `aikouya.store` 与 `www` 不挂站点，留给以后使用。
 
 ## 写作约定
 
